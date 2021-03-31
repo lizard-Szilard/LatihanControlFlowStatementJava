@@ -1,5 +1,7 @@
 package billing;
+
 import java.time.LocalDate;
+
 public class Costumer {
 
   public int hitungPembayaranTagihan(
@@ -10,7 +12,7 @@ public class Costumer {
     int pembayaranDenda = tagihanSebelumDenda;
 
     if (tglJatuhTempo > tanggalSekarang && blnJatuhTempo > bulanSekarang) {
-      pembayaranDenda = (int)(tagihanSebelumDenda + tagihanSebelumDenda * prosentaseDenda);
+      pembayaranDenda = (int) (tagihanSebelumDenda + tagihanSebelumDenda * prosentaseDenda);
     }
     return pembayaranDenda;
   }
