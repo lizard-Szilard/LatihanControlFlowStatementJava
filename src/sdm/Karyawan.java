@@ -1,15 +1,24 @@
 package sdm;
 
 public class Karyawan {
-	public int hitungGaji(int gajiSebelumPPH, int PTKP){
-	
-	int Gaji = gajiSebelumPPH;
+  public int hitungGaji(int gajiSebelumPPH, double PPH, int PTKP) {
 
-	if (Gaji >= PTKP){
-		Gaji = (int) (Gaji - Gaji * 0.1);
-	}
+    int Gaji = gajiSebelumPPH;
 
-	return Gaji;
+    if (Gaji >= PTKP) {
+      Gaji = (int) (Gaji - Gaji * PPH);
+    }
 
-}
+    return Gaji;
+  }
+
+  public int hitungPPH(int gajiSebelumPPH, double PPH, int PTKP) {
+
+    int nominalPajak = 0;
+
+    if (gajiSebelumPPH >= PTKP) {
+      nominalPajak = (int) (gajiSebelumPPH * PPH);
+    }
+    return nominalPajak;
+  }
 }
